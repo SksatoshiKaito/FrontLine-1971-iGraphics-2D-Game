@@ -1,0 +1,47 @@
+# Visual Studio temporary files
+*.suo
+*.user
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+
+# Visual Studio IntelliSense cache
+ipch/
+
+# Build output directories
+Debug/
+Release/
+x64/
+x86/
+
+# Object files
+*.obj
+*.o
+*.pch
+
+# Linker output
+*.ilk
+*.pdb
+*.exp
+*.lib.bak
+
+# Compiled executables
+*.exe
+*.dll
+# (Keep GLUT32.DLL since it's required to run the project)
+!GLUT32.DLL
+
+# Visual Studio IDE files
+.vs/
+*.ncb
+*.vsp
+*.vspx
+
+# Windows thumbnail cache
+Thumbs.db
+ehthumbs.db
+
+# OS files
+.DS_Store
+Desktop.ini
