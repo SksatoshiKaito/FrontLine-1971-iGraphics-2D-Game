@@ -1,20 +1,6 @@
-# Force GitHub to detect C++ as the main language
+# Linguist overrides for GitHub language detection
 
-# Mark source code files as C++ and force detection
-*.cpp linguist-language=C++ linguist-detectable=true
-*.hpp linguist-language=C++ linguist-detectable=true
-
-# Mark header files as C++ (not vendored)
-*.h   linguist-language=C++ linguist-detectable=true
-
-# Exception: known third-party single-header libraries - mark as vendored
-demo/stb_image.h linguist-vendored=true
-demo/glut.h      linguist-vendored=true
-demo/glaux.h     linguist-vendored=true
-demo/iGraphics.h linguist-vendored=false
-demo/iGraphics.h linguist-detectable=true
-
-# Mark all binary and asset files as vendored (ignored in language stats)
+# Mark binary and asset files as vendored (excluded from language stats)
 *.dll  linguist-vendored=true
 *.lib  linguist-vendored=true
 *.LIB  linguist-vendored=true
@@ -24,3 +10,10 @@ demo/iGraphics.h linguist-detectable=true
 *.jpg  linguist-vendored=true
 *.PNG  linguist-vendored=true
 *.JPG  linguist-vendored=true
+
+# Mark known third-party headers as vendored
+demo/stb_image.h linguist-vendored=true
+demo/glut.h      linguist-vendored=true
+demo/glaux.h     linguist-vendored=true
+demo/glui32.lib  linguist-vendored=true
+demo/bitmap_loader.h linguist-vendored=true
