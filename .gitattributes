@@ -1,17 +1,26 @@
-# Tell GitHub to detect C++ as the main language
+# Force GitHub to detect C++ as the main language
 
-# Mark binary/asset files as non-code (so GitHub ignores them for language stats)
-*.dll binary linguist-vendored
-*.lib binary linguist-vendored
-*.LIB binary linguist-vendored
-*.wav binary linguist-vendored
-*.WAV binary linguist-vendored
-*.png binary linguist-vendored
-*.jpg binary linguist-vendored
-*.JPG binary linguist-vendored
-*.PNG binary linguist-vendored
+# Mark source code files as C++ and force detection
+*.cpp linguist-language=C++ linguist-detectable=true
+*.hpp linguist-language=C++ linguist-detectable=true
 
-# Mark the actual source code files as C++
-*.cpp linguist-language=C++
-*.h   linguist-language=C++
-*.hpp linguist-language=C++
+# Mark header files as C++ (not vendored)
+*.h   linguist-language=C++ linguist-detectable=true
+
+# Exception: known third-party single-header libraries - mark as vendored
+demo/stb_image.h linguist-vendored=true
+demo/glut.h      linguist-vendored=true
+demo/glaux.h     linguist-vendored=true
+demo/iGraphics.h linguist-vendored=false
+demo/iGraphics.h linguist-detectable=true
+
+# Mark all binary and asset files as vendored (ignored in language stats)
+*.dll  linguist-vendored=true
+*.lib  linguist-vendored=true
+*.LIB  linguist-vendored=true
+*.wav  linguist-vendored=true
+*.WAV  linguist-vendored=true
+*.png  linguist-vendored=true
+*.jpg  linguist-vendored=true
+*.PNG  linguist-vendored=true
+*.JPG  linguist-vendored=true
