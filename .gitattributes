@@ -1,0 +1,17 @@
+# Tell GitHub to detect C++ as the main language
+
+# Mark binary/asset files as non-code (so GitHub ignores them for language stats)
+*.dll binary linguist-vendored
+*.lib binary linguist-vendored
+*.LIB binary linguist-vendored
+*.wav binary linguist-vendored
+*.WAV binary linguist-vendored
+*.png binary linguist-vendored
+*.jpg binary linguist-vendored
+*.JPG binary linguist-vendored
+*.PNG binary linguist-vendored
+
+# Mark the actual source code files as C++
+*.cpp linguist-language=C++
+*.h   linguist-language=C++
+*.hpp linguist-language=C++
